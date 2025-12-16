@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <title>Hello From Avinash</title>
+    <title>Hello From Sai</title>
 
     <link rel="stylesheet" th:href="@{webjars/bootstrap/4.2.1/css/bootstrap.min.css}"/>
     <link rel="stylesheet" th:href="@{/css/main.css}"/>
@@ -15,10 +15,47 @@
 
 <main role="main" class="container">
 
-    <div class="starter-template">
-        <h1>Welcome to Jenkins CICD Project</h1>
-        <h2> <span th:text="'Hello, ' + ${message}"></span> </h2>
-    </div>    
+    <div class="starter-template text-center mt-5">
+        <h1>Welcome to Jenkins CI/CD Project</h1>
+        <h2>
+            <span th:text="'Hello, ' + ${message}"></span>
+        </h2>
+    </div>
+
+    <hr/>
+
+    <!-- About Project Section -->
+    <div class="mt-4">
+        <h3>About This Project</h3>
+        <p>
+            This project demonstrates a complete <strong>CI/CD pipeline</strong> using
+            <strong>Jenkins, Maven, GitHub, and Apache Tomcat</strong>.
+        </p>
+
+        <ul>
+            <li>Source code is managed using <strong>GitHub</strong></li>
+            <li>Build and dependency management handled by <strong>Maven</strong></li>
+            <li>Continuous Integration performed by <strong>Jenkins</strong></li>
+            <li>Application deployed automatically to <strong>Apache Tomcat</strong></li>
+        </ul>
+
+        <p>
+            Each time the developer pushes code to GitHub, Jenkins automatically:
+        </p>
+
+        <ol>
+            <li>Clones the repository</li>
+            <li>Builds the project using Maven</li>
+            <li>Runs unit tests</li>
+            <li>Creates a WAR file</li>
+            <li>Deploys the application to Tomcat</li>
+        </ol>
+
+        <p>
+            This setup follows real-time DevOps practices and helps ensure faster,
+            reliable, and automated application delivery.
+        </p>
+    </div>
 
 </main>
 <!-- /.container -->
@@ -26,4 +63,3 @@
 <script type="text/javascript" th:src="@{webjars/bootstrap/4.2.1/js/bootstrap.min.js}"></script>
 </body>
 </html>
-
