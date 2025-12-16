@@ -9,56 +9,119 @@
     <link rel="stylesheet" th:href="@{webjars/bootstrap/4.2.1/css/bootstrap.min.css}"/>
     <link rel="stylesheet" th:href="@{/css/main.css}"/>
 
+    <style>
+        .tech-badge {
+            margin: 4px;
+        }
+        .card {
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+    </style>
+
 </head>
 
 <body>
 
 <main role="main" class="container">
 
-    <div class="starter-template text-center mt-5">
-        <h1>Welcome to Jenkins CI/CD Project</h1>
-        <h2>
+    <!-- Header -->
+    <div class="text-center mt-5 mb-4">
+        <h1 class="display-4">🚀 Jenkins CI/CD Project</h1>
+        <p class="lead">
             <span th:text="'Hello, ' + ${message}"></span>
-        </h2>
+        </p>
+        <span class="badge badge-success tech-badge">CI/CD</span>
+        <span class="badge badge-primary tech-badge">Jenkins</span>
+        <span class="badge badge-warning tech-badge">Maven</span>
+        <span class="badge badge-info tech-badge">Tomcat</span>
+        <span class="badge badge-dark tech-badge">GitHub</span>
     </div>
 
-    <hr/>
+    <!-- Cards Section -->
+    <div class="row">
 
-    <!-- About Project Section -->
-    <div class="mt-4">
-        <h3>About This Project</h3>
-        <p>
-            This project demonstrates a complete <strong>CI/CD pipeline</strong> using
-            <strong>Jenkins, Maven, GitHub, and Apache Tomcat</strong>.
-        </p>
+        <!-- About Card -->
+        <div class="col-md-6 mb-4">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h4 class="card-title">📌 About This Project</h4>
+                    <p class="card-text">
+                        This project showcases a real-world <strong>DevOps CI/CD pipeline</strong>
+                        that automates build, test, and deployment of a Java web application.
+                    </p>
+                    <p class="card-text">
+                        It follows industry-standard DevOps practices for faster and reliable
+                        application delivery.
+                    </p>
+                </div>
+            </div>
+        </div>
 
-        <ul>
-            <li>Source code is managed using <strong>GitHub</strong></li>
-            <li>Build and dependency management handled by <strong>Maven</strong></li>
-            <li>Continuous Integration performed by <strong>Jenkins</strong></li>
-            <li>Application deployed automatically to <strong>Apache Tomcat</strong></li>
-        </ul>
+        <!-- Tools Card -->
+        <div class="col-md-6 mb-4">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h4 class="card-title">🛠 Tools & Technologies</h4>
+                    <ul>
+                        <li><strong>GitHub</strong> – Source Code Management</li>
+                        <li><strong>Jenkins</strong> – CI/CD Automation</li>
+                        <li><strong>Maven</strong> – Build & Dependency Management</li>
+                        <li><strong>Apache Tomcat</strong> – Application Server</li>
+                        <li><strong>Spring Boot</strong> – Backend Framework</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
 
-        <p>
-            Each time the developer pushes code to GitHub, Jenkins automatically:
-        </p>
+        <!-- Pipeline Card -->
+        <div class="col-md-12 mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">🔄 CI/CD Pipeline Flow</h4>
+                    <div class="row text-center">
+                        <div class="col-md-2">👨‍💻<br/>Developer</div>
+                        <div class="col-md-2">📦<br/>GitHub</div>
+                        <div class="col-md-2">⚙️<br/>Jenkins</div>
+                        <div class="col-md-2">🔨<br/>Maven</div>
+                        <div class="col-md-2">📄<br/>WAR</div>
+                        <div class="col-md-2">🚀<br/>Tomcat</div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-        <ol>
-            <li>Clones the repository</li>
-            <li>Builds the project using Maven</li>
-            <li>Runs unit tests</li>
-            <li>Creates a WAR file</li>
-            <li>Deploys the application to Tomcat</li>
-        </ol>
+        <!-- Steps Card -->
+        <div class="col-md-12 mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">✅ Automated Steps</h4>
+                    <ol>
+                        <li>Developer pushes code to GitHub</li>
+                        <li>Jenkins pulls latest source code</li>
+                        <li>Maven compiles and runs unit tests</li>
+                        <li>WAR file is generated</li>
+                        <li>WAR is deployed to Apache Tomcat</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
 
-        <p>
-            This setup follows real-time DevOps practices and helps ensure faster,
-            reliable, and automated application delivery.
-        </p>
     </div>
+
+    <!-- Footer -->
+    <footer class="text-center mt-4 mb-4">
+        <hr/>
+        <p>
+            Built by <strong>Sai</strong> | DevOps & Cloud Engineer  
+        </p>
+        <p>
+            <span class="badge badge-secondary">AWS</span>
+            <span class="badge badge-secondary">Linux</span>
+            <span class="badge badge-secondary">DevOps</span>
+        </p>
+    </footer>
 
 </main>
-<!-- /.container -->
 
 <script type="text/javascript" th:src="@{webjars/bootstrap/4.2.1/js/bootstrap.min.js}"></script>
 </body>
